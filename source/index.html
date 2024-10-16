@@ -11,7 +11,7 @@
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header" data-test="header">
     <div class="header__container">
       <div class="header__logo-wrapper">
         <a href="#" class="header__logo">
@@ -25,22 +25,22 @@
           </picture>
         </a>
       </div>
-      <nav class="header__nav header__nav--opened">
-        <button class="header__nav-toggle" type="button" aria-label="Меню">
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle js-toggle-button" type="button" aria-label="Меню">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="nav">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Главная</a>
           </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Каталог</a>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Каталог</a>
           </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Доставка</a>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Доставка</a>
           </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">О нас</a>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">О нас</a>
           </li>
         </ul>
       </nav>
@@ -60,8 +60,8 @@
       <div class="promo__container">
         <p class="promo__label">Новинка!</p>
         <h2 class="promo__title">Декаф Флэт Уайт</h2>
-        <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
-          что нужно для расслабления после тяжёлого рабочего дня.</p>
+        <p class="promo__description">Свежесваренный кофе без кофеина из&nbsp;Эфиопии с натуральным фермерским&nbsp;молоком — то,
+          что нужно для&nbsp;расслабления после тяжёлого&nbsp;рабочего&nbsp;дня.</p>
         <p class="promo__price">
           <span class="promo__price-old">295Р</span>
           225Р
