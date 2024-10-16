@@ -1,5 +1,55 @@
 .header {
-  background-color: #FFFFFF;
-  color: #000000;
-  padding: 10px 15px;
+  padding-left: 20px;
+}
+
+.header__container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.header__logo-wrapper {
+  padding: 12px 0;
+}
+
+.header__actions {
+  display: flex;
+  margin-left: auto;
+}
+
+.header__action {
+  display: block;
+
+  &:active {
+    background-color: #F0EBFF;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: auto 0;
+    background-color: #000000;
+  }
+}
+
+.header__action--login {
+  &::before {
+    mask-image: url("../../icons/stack.svg#account-icon");
+    mask-size: 16px 16px;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+  }
+}
+
+.header__action--cart {
+  &::before {
+    mask-image: url("../../icons/stack.svg#basket-icon");
+    mask-size: 16px 16px;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+  }
 }
