@@ -1,0 +1,50 @@
+.toggle-button {
+  width: 42px;
+  height: 24px;
+}
+
+.toggle-button__input[type="checkbox"] {
+  position: absolute;
+  top: -100px;
+  left: 100px;
+  visibility: hidden;
+
+  &:checked+.toggle-button__ball {
+    background: #7859CF;
+    border: 2px solid #7859CF;
+
+    &::before {
+      background-color: #FFFFFF;
+      transform: translate(18px, -50%);
+    }
+  }
+}
+
+.toggle-button__ball {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  background: #BDBDBD;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid #BDBDBD;
+
+  &:hover {
+    background-color: rgba(120, 89, 207, 0.25);
+    border: 2px solid #9070EC;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    transform: translate(0px, -50%);
+    transition: all 0.3s;
+  }
+}

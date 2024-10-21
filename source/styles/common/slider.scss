@@ -1,0 +1,36 @@
+.slider__arrow {
+  display: block;
+
+  &:active {
+    background-color: #F0EBFF;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 20px;
+    margin: auto 0;
+    background-color: $button-color;
+    position: absolute;
+    top: 50%
+  }
+}
+
+.slider__arrow--prev {
+  &::before {
+    mask-image: url("../../icons/stack.svg#arrow-prev");
+    mask-size: 11px 20px;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+  }
+}
+
+.slider__arrow--next {
+  &::before {
+    mask-image: url("../../icons/stack.svg#arrow-next");
+    mask-size: 16px 16px;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+  }
+}
