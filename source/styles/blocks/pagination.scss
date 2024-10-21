@@ -1,0 +1,128 @@
+
+.pagination {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.pagination__item {
+  position: relative;
+}
+
+.pagination__link {
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $button-color;
+
+  &:hover,
+  &:focus-visible,
+  &:focus {
+    background-color: $button-color;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+  }
+
+  &:active {
+    background-color: #593CAC;
+    color: #FFFFFF;
+  }
+}
+
+.pagination__current {
+  color: #333333;
+  background-color: transparent;
+
+  &:hover,
+  &:focus-visible,
+  &:focus,
+  &:active {
+    color: #333333;
+    background-color: transparent;
+    outline: none;
+    pointer-events: none;
+  }
+}
+
+.pagination__link-arrow {
+  position: relative;
+
+  &:hover,
+  &:focus-visible,
+  &:focus {
+    background-color: $button-color;
+    border: none;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #593CAC;
+  }
+
+  &::before {
+    content: '';
+    mask-repeat: no-repeat;
+    width: 6px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $button-color;
+  }
+
+  &:hover::before {
+    background-color: #FFFFFF;
+  }
+
+  &:focus::before {
+    background-color: #FFFFFF;
+  }
+
+  &:focus-visible::before {
+    background-color: #FFFFFF;
+  }
+
+  &:active::before {
+    background-color: #FFFFFF;
+  }
+}
+
+.pagination__link-arrow.disabled {
+  background-color: #E2E2E2;
+  cursor: not-allowed;
+  pointer-events: none;
+
+  &::before {
+    background-color: #FFFFFF;
+  }
+}
+
+.pagination__link-arrow--prev {
+  &::before {
+    mask-image: url("../../icons/pagination-arrow-prev.svg");
+  }
+}
+
+.pagination__link-arrow--next {
+  &::before {
+    mask-image: url("../../icons/pagination-arrow-next.svg");
+  }
+}
+
+.pagination__link.disabled {
+  background-color: #E2E2E2;
+  color: #FFFFFF;
+  cursor: not-allowed;
+  pointer-events: none;
+}

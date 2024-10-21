@@ -1,0 +1,80 @@
+.control,
+.control__switch {
+  position: relative;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.control__input {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.control__indicator {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #BDBDBD;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.control__label:hover~.control__indicator {
+  border: 2px solid #9070EC;
+}
+
+.control__label:hover~.control__indicator::before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #7859CF;
+  opacity: 0.25;
+  border-radius: 50%;
+  content: "";
+}
+
+.control__input[type="radio"]:checked~.control__indicator {
+  border: 2px solid #7859CF;
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #7859CF;
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.control__label {
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.control__input:disabled~.control__indicator {
+  border-color: #BDBDBD;
+  cursor: default;
+}
+
+.control__input:disabled~.control__indicator::before {
+  opacity: 0;
+  border: 2px solid #BDBDBD;
+}
+
+
+.control__input:disabled~.control__label {
+  color: #BDBDBD;
+  cursor: default;
+}

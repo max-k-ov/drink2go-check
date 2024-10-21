@@ -1,0 +1,180 @@
+.footer {
+  padding: 22px 0 30px 0;
+}
+
+.footer__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.footer__wrapper {
+  display: flex;
+  padding: 0 20px 22px 20px;
+  border-bottom: 1px solid #F0EBFF;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  display: block;
+}
+
+.footer__label {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: $button-color;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.footer__menu {
+  list-style: none;
+  padding: 0 20px 28px 20px;
+  margin: 0;
+  border-bottom: 1px solid #F0EBFF;
+}
+
+.footer__menu-item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer__menu-link {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333333;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: #9070EC;
+    outline: none;
+  }
+
+  &:active {
+    color: #593CAC;
+  }
+}
+
+.footer__contacts {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #F0EBFF;
+}
+
+.footer__address-wrapper {
+  padding: 0 20px;
+}
+
+.footer__address {
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+  margin-bottom: 16px;
+  padding-left: 19px;
+  position: relative;
+
+  &::after {
+    content: '';
+    background-image: url("../../icons/icon-location-footer.svg");
+    width: 13px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+}
+
+.footer__phone {
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  color: #333333;
+  padding-left: 19px;
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: #9070EC;
+    outline: none;
+  }
+
+  &:active {
+    color: #593CAC;
+  }
+
+  &::after {
+    content: '';
+    background-image: url("../../icons/icon-tel-footer.svg");
+    width: 13px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+}
+
+.footer__developer-text {
+  font-size: 12px;
+  line-height: 16px;
+  color: #BDBDBD;
+  margin: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer__developer-link {
+  color: #BDBDBD;
+  text-decoration: none;
+  position: relative;
+  padding-right: 16px;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $button-color;
+    outline: none;
+  }
+
+  &:active {
+    color: #593CAC;
+  }
+
+  &::before {
+    content: '';
+    mask-image: url("../../icons/logoHTMLAcademy.svg");
+    width: 12px;
+    height: 16px;
+    position: absolute;
+    background-color: #BDBDBD;
+    right: 0;
+    top: 0;
+  }
+
+  &:hover::before {
+    background-color: $button-color;
+  }
+
+  &:focus::before {
+    background-color: $button-color;
+  }
+
+  &:focus-visible::before {
+    background-color: $button-color;
+  }
+
+  &:active::before {
+    background-color: #593CAC;
+  }
+}

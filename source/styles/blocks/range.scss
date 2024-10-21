@@ -1,0 +1,48 @@
+.range {
+  position: relative;
+  width: 280px;
+}
+
+.range__scale {
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.range__wrapper {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.range__input {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  border: 2px solid #9070EC;
+  background-color: #FFFFFF;
+  width: 118px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 0;
+  text-align: center;
+  color: #BDBDBD;
+  padding: 0 10px;
+
+  &:focus-visible{
+    border: 2px solid $button-color;
+
+  }
+}
+
+.range__input-separator {
+  font-size: 21px;
+  color: #BDBDBD;
+}
+
+.range__input[disabled] {
+  border: 2px solid #E2E2E2;
+  background-color: #F8F8F8;
+  color: #BDBDBD;
+  cursor: not-allowed;
+}
