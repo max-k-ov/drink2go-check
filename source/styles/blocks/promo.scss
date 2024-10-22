@@ -9,6 +9,10 @@
   align-items: center;
   padding: 20px 0 60px;
   background-color: #F3EBE1;
+
+  @media (width >= $tablet-width) {
+    padding: 60px 0 50px;
+  }
 }
 
 .promo__container-lavender {
@@ -43,6 +47,13 @@
   margin: 0;
   margin-bottom: 10px;
   letter-spacing: 0.8px;
+
+  @media (width >= $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+  }
 }
 
 .promo__description {
@@ -51,12 +62,22 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0 20px;
+
+  @media (width >= $tablet-width) {
+    line-height: 32px;
+    padding: 0 60px;
+    font-size: 20px;
+  }
 }
 
 .promo__control {
   display: flex;
   align-items: center;
   gap: 21px;
+
+  @media (width >= $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .promo__price {
@@ -79,6 +100,13 @@
 .promo__picture-wrapper {
   order: -1;
   margin-bottom: 10px;
+
+  @media (width >= $tablet-width) {
+    order: 0;
+  }
+
+  @media (width >= $desktop-width) {
+  }
 }
 
 .promo__slider-arrow {
@@ -99,14 +127,26 @@
   &:active {
     background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
   }
+
+  @media (width >= $tablet-width) {
+    top: 320px
+  }
 }
 
 .promo__slider-arrow--prev {
   left: 0;
+
+  @media (width >= $tablet-width) {
+    left: 30px;
+  }
 }
 
 .promo__slider-arrow--next {
   right: 0;
+
+  @media (width >= $tablet-width) {
+    right: 30px;
+  }
 }
 
 .promo__slider-arrow.disabled {
