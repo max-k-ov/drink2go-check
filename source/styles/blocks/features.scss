@@ -1,5 +1,9 @@
 .features {
   padding: 50px 20px 60px 20px;
+
+  @media (width >= $tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .features__label {
@@ -21,6 +25,12 @@
   text-align: center;
   margin: 0;
   margin-bottom: 36px;
+
+  @media (width >= $tablet-width) {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 64px;
+  }
 }
 
 .features__list {
