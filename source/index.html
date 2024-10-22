@@ -3,10 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+  <meta name="description" content="Drink2Go – насладитесь освежающими кофейными напитками в удобных банках. Высококачественный кофе, разнообразие вкусов и удобство в каждой банке. Идеальный выбор для бодрости в любое время и в любом месте. Закажите сейчас и откройте для себя вкусный способ оставаться энергичным.">
+  <title>Кофейные напитки Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preload" href="#" type="font/woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="images/promo-images/flatWhite_promo_desktop@2x.webp" as="image" media="(min-width: 1440px)" type="image/webp">
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="script" href="./scripts/index.js" type="text/javascript">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
   <script src="scripts/index.js" defer></script>
@@ -29,7 +37,7 @@
         </a>
       </div>
       <nav class="main-nav main-nav--closed">
-        <button class="main-nav__toggle" type="button" aria-label="Меню">
+        <button class="main-nav__toggle js-toggle-button" type="button" aria-label="Меню">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
@@ -59,8 +67,8 @@
   </header>
 
   <main class="main-content">
-    <section class="promo" data-test="hero">
-      <div class="promo__container">
+    <section class="promo slider-pagination" data-test="hero">
+      <div class="promo__container promo__container-show">
         <h1 class="visually-hidden">Кофейня Drink2Go</h1>
         <p class="promo__label">Новинка!</p>
         <h2 class="promo__title">Декаф Флэт Уайт</h2>
@@ -93,14 +101,76 @@
           </picture>
         </div>
       </div>
+      <div class="promo__container promo__container-lavender">
+        <h1 class="visually-hidden">Кофейня Drink2Go</h1>
+        <p class="promo__label">Новинка!</p>
+        <h2 class="promo__title">Лавандовый Латте</h2>
+        <p class="promo__description">Невероятное сочетание перуанской&nbsp;высокогорной арабики с&nbsp;молоком ламы и лавандовым сиропом унесёт вас прямо на&nbsp;вершину Радужных гор
+        </p>
+        <div class="promo__control">
+          <p class="promo__price">
+            <span class="promo__price-old">285₽</span>
+            265₽
+          </p>
+          <a href="#" class="promo__button button">Заказать</a>
+        </div>
+        <div class="promo__picture-wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" width="600" height="600" type="image/webp"
+              srcset="images/promo-images/lavender_promo_desktop@1x.webp 1x, images/promo-images/lavender_promo_desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="476" height="476" type="image/webp"
+              srcset="images/promo-images/lavender_promo_tablet@1x.webp 1x, images/promo-images/lavender_promo_tablet@2x.webp 2x">
+            <source width="280" height="280" type="image/webp"
+              srcset="images/promo-images/lavender_promo_mobile@1x.webp 1x, images/promo-images/lavender_promo_mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" width="600" height="600" type="image/png"
+              srcset="images/promo-images/lavender_promo_desktop@1x.png 1x, images/promo-images/lavender_promo_desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="476" height="476" type="image/png"
+              srcset="images/promo-images/lavender_promo_tablet@1x.png 1x, images/promo-images/lavender_promo_tablet@2x.png 2x">
+            <img class="promo__main-picture" loading="eager" src="images/promo-images/lavender_promo_mobile@1x.png"
+              srcset="images/promo-images/lavender_promo_mobile@2x.png 2x" width="280" height="280"
+              alt="Кофе Декаф Флэт Уайт">
+          </picture>
+        </div>
+      </div>
+      <div class="promo__container promo__container-espresso">
+        <h1 class="visually-hidden">Кофейня Drink2Go</h1>
+        <p class="promo__label">Новинка!</p>
+        <h2 class="promo__title">Тройной Эспрессо</h2>
+        <p class="promo__description">Мощнее укола адреналина, чернее&nbsp;самой тёмной ночи, этот&nbsp;тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+        </p>
+        <div class="promo__control">
+          <p class="promo__price">
+            <span class="promo__price-old">395₽</span>
+            375₽
+          </p>
+          <a href="#" class="promo__button button">Заказать</a>
+        </div>
+        <div class="promo__picture-wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" width="600" height="600" type="image/webp"
+              srcset="images/promo-images/espresso_promo_desktop@1x.webp 1x, images/promo-images/espresso_promo_desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="476" height="476" type="image/webp"
+              srcset="images/promo-images/espresso_promo_tablet@1x.webp 1x, images/promo-images/espresso_promo_tablet@2x.webp 2x">
+            <source width="280" height="280" type="image/webp"
+              srcset="images/promo-images/espresso_promo_mobile@1x.webp 1x, images/promo-images/espresso_promo_mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" width="600" height="600" type="image/png"
+              srcset="images/promo-images/espresso_promo_desktop@1x.png 1x, images/promo-images/espresso_promo_desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="476" height="476" type="image/png"
+              srcset="images/promo-images/espresso_promo_tablet@1x.png 1x, images/promo-images/espresso_promo_tablet@2x.png 2x">
+            <img class="promo__main-picture" loading="eager" src="images/promo-images/espresso_promo_mobile@1x.png"
+              srcset="images/promo-images/espresso_promo_mobile@2x.png 2x" width="280" height="280"
+              alt="Кофе Декаф Флэт Уайт">
+          </picture>
+        </div>
+      </div>
       <div class="promo__slider">
-        <a href="#" class="promo__slider-arrow promo__slider-arrow--prev">
+        <a href="#" class="promo__slider-arrow promo__slider-arrow--prev slider-button-prev">
           <span class="visually-hidden">Предыдущий</span>
           <svg width="20" height="20">
             <use href="../../icons/stack.svg#arrow-slider-prev"></use>
           </svg>
         </a>
-        <a href="#" class="promo__slider-arrow promo__slider-arrow--next">
+        <a href="#" class="promo__slider-arrow promo__slider-arrow--next slider-button-next">
           <span class="visually-hidden">Следующий</span>
           <svg width="20" height="20">
             <use href="../../icons/stack.svg#arrow-slider-next"></use>
@@ -109,7 +179,7 @@
       </div>
     </section>
 
-    <section class="features">
+    <section class="features" data-test="features">
       <p class="features__label">Преимущества</p>
       <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
       <div class="features__list">
@@ -127,12 +197,12 @@
         </div>
         <div class="feature feature--eco">
           <h3 class="feature__title">Экологичность</h3>
-          <p class="feature__text">Вся упаковка сделана из перерабатываемых материалов</p>
+          <p class="feature__text">Вся упаковка сделана из&nbsp;перерабатываемых материалов</p>
         </div>
       </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog" data-test="catalog">
       <p class="catalog__label">Каталог</p>
       <h2 class="catalog__title">Каталог кофейных напитков</h2>
 
@@ -477,14 +547,15 @@
         </ul>
       </div>
     </section>
-    <section class="map">
+
+    <section class="map" data-test="map">
       <div class="map__wrapper">
         <span class="visually-hidden">Карта местонахождения Drunk2Go</span>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" data-test="footer">
     <div class="footer__container">
 
       <div class="footer__wrapper">
@@ -527,6 +598,9 @@
             <a href="#" class="footer__menu-link">Доставка</a>
           </li>
           <li class="footer__menu-item">
+            <a href="#" class="footer__menu-link">Способы оплаты</a>
+          </li>
+          <li class="footer__menu-item">
             <a href="#" class="footer__menu-link">О нас</a>
           </li>
         </ul>
@@ -546,7 +620,7 @@
       </nav>
 
       <div class="footer__contacts">
-        <p class="footer__label">Контакты</p>
+        <p class="footer__label footer__label--contacts">Контакты</p>
         <div class="footer__address-wrapper">
           <address class="footer__address">Санкт-Петербург, набережная реки&nbsp;Карповки, дом 5</address>
           <a href="tel:+79999999999" class="footer__phone">+7 (999) 999-99-99</a>

@@ -1,5 +1,5 @@
 .footer {
-  padding: 22px 0 30px 0;
+  padding: 20px 0 30px 0;
 }
 
 .footer__container {
@@ -10,9 +10,10 @@
 
 .footer__wrapper {
   display: flex;
-  padding: 0 20px 22px 20px;
+  padding: 0 20px 20px 20px;
   border-bottom: 1px solid #F0EBFF;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer__logo {
@@ -26,9 +27,13 @@
   text-align: left;
   color: $button-color;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding-left: 20px;
   padding-top: 20px;
+}
+
+.footer__label--contacts {
+  margin-bottom: 20px;
 }
 
 .footer__menu {
@@ -39,7 +44,7 @@
 }
 
 .footer__menu-item {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   &:last-child {
     margin-bottom: 0;
@@ -54,6 +59,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #333333;
+  letter-spacing: 0.2px;
 
   &:hover,
   &:focus,
@@ -121,7 +127,7 @@
     height: 16px;
     position: absolute;
     left: 0;
-    top: 2px;
+    top: 0;
   }
 }
 

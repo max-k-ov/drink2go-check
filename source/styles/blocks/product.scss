@@ -11,6 +11,10 @@
   padding: 40px 20px 20px 20px;
   margin-bottom: 20px;
   background-color: #FFFFFF;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .product__card-link {
