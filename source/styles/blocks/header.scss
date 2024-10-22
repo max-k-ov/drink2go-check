@@ -13,6 +13,19 @@
   padding: 12px 0;
 }
 
+.header__logo {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .header__actions {
   display: flex;
   margin-left: auto;
@@ -25,6 +38,12 @@
     background-color: #F0EBFF;
   }
 
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -32,6 +51,20 @@
     height: 60px;
     margin: auto 0;
     background-color: #000000;
+  }
+
+  &:hover::before {
+    background-color: $button-color;
+  }
+
+  &:focus::before {
+    outline: none;
+    background-color: $button-color;
+  }
+
+  &:focus-visible::before {
+    outline: none;
+    background-color: $button-color;
   }
 }
 

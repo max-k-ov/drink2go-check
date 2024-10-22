@@ -25,30 +25,30 @@
   cursor: pointer;
   top: 24px;
   left: 22px;
-  box-shadow: 0 4px 0 0 #000000, 0 8px 0 0 #000000;
+  box-shadow: 0 5px 0 0 #000000, 0 10px 0 0 #000000;
 }
 
 .main-nav--opened .main-nav__toggle::before {
   content: "";
   position: absolute;
-  width: 12px;
+  width: 16px;
   height: 1.5px;
   background-color: #000000;
   transform: rotate(45deg);
-  top: 30px;
-  left: 24px;
+  top: 29px;
+  left: 22px;
   box-shadow: none;
 }
 
 .main-nav--opened .main-nav__toggle::after {
   content: "";
   position: absolute;
-  width: 12px;
+  width: 16px;
   height: 1.5px;
   background-color: #000000;
   transform: rotate(-45deg);
-  top: 30px;
-  left: 24px;
+  top: 29px;
+  left: 22px;
 }
 
 .main-nav__list {
@@ -81,8 +81,9 @@
   font-size: 12px;
   line-height: 16px;
   text-decoration: none;
-  padding: 20px 0 21px;
+  padding: 20px 0 20px;
   color: $primary-color;
+  letter-spacing: 0.2px;
 
   &:active {
     background-color: #F0EBFF;
